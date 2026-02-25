@@ -5,18 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My Healing Space - A gentle space for clarity, calm, and emotional healing. Counseling, Special Education, Mindfulness Programs in Sri Lanka.">
     <title>My Healing Space | Counseling & Wellness</title>
-    
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts - Cormorant Garamond for elegance, Quattrocento Sans for readability -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Quattrocento+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
         :root {
             --primary-teal: #5A9A92;
@@ -28,300 +21,129 @@
             --accent-coral: #D4A59A;
             --accent-sage: #9FB09F;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Quattrocento Sans', sans-serif;
-            color: var(--text-dark);
-            background-color: var(--soft-cream);
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-        }
-        
-        /* Smooth Fade In Animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Slide In Animations */
-        .slide-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        
-        .slide-right {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        
-        .slide-left.visible,
-        .slide-right.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        /* Header Styles */
-        .header-bg {
-            background: linear-gradient(135deg, var(--soft-cream) 0%, var(--warm-beige) 100%);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .header-scrolled {
-            background: rgba(250, 249, 246, 0.95);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-        }
-        
-        /* Hero Section */
-        .hero-gradient {
-            background: linear-gradient(135deg, 
-                rgba(90, 154, 146, 0.15) 0%, 
-                rgba(232, 227, 217, 0.8) 50%,
-                rgba(159, 176, 159, 0.15) 100%);
-        }
-        
-        /* Service Cards */
-        .service-card {
-            background: white;
-            border-radius: 16px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 28px rgba(90, 154, 146, 0.15);
-        }
-        
-        /* Buttons */
-        .btn-primary {
-            background: var(--primary-teal);
-            color: white;
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            display: inline-block;
-            text-decoration: none;
-        }
-        
-        .btn-primary:hover {
-            background: var(--dark-teal);
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(90, 154, 146, 0.3);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary-teal);
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid var(--primary-teal);
-            cursor: pointer;
-            display: inline-block;
-            text-decoration: none;
-        }
-        
-        .btn-secondary:hover {
-            background: var(--primary-teal);
-            color: white;
-        }
-        
-        /* Mobile Menu */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Quattrocento Sans', sans-serif; color: var(--text-dark); background-color: var(--soft-cream); overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .slide-left { opacity: 0; transform: translateX(-50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .slide-right { opacity: 0; transform: translateX(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .slide-left.visible, .slide-right.visible { opacity: 1; transform: translateX(0); }
+        .header-bg { background: linear-gradient(135deg, var(--soft-cream) 0%, var(--warm-beige) 100%); transition: all 0.3s ease; }
+        .header-scrolled { background: rgba(250, 249, 246, 0.95); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); }
+        .hero-gradient { background: linear-gradient(135deg, rgba(90, 154, 146, 0.15) 0%, rgba(232, 227, 217, 0.8) 50%, rgba(159, 176, 159, 0.15) 100%); }
+        .service-card { background: white; border-radius: 16px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 12px 28px rgba(90, 154, 146, 0.15); }
+        .btn-primary { background: var(--primary-teal); color: white; padding: 14px 32px; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; display: inline-block; text-decoration: none; }
+        .btn-primary:hover { background: var(--dark-teal); transform: scale(1.05); box-shadow: 0 8px 20px rgba(90, 154, 146, 0.3); }
+        .btn-secondary { background: transparent; color: var(--primary-teal); padding: 14px 32px; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; border: 2px solid var(--primary-teal); cursor: pointer; display: inline-block; text-decoration: none; }
+        .btn-secondary:hover { background: var(--primary-teal); color: white; }
         .mobile-menu {
             transform: translateX(100%);
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #ffffff !important;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 200;
+            overflow-y: auto;
         }
-        
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
-        
-        /* Mobile Menu Overlay */
+        .mobile-menu.active { transform: translateX(0); }
         .menu-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
-            z-index: 40;
+            background: rgba(44, 62, 80, 0.65);
+            z-index: 199;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.4s ease;
         }
-        
-        .menu-overlay.active {
-            opacity: 1;
-            pointer-events: all;
+        .menu-overlay.active { opacity: 1; pointer-events: all; }
+        .decorative-line { width: 60px; height: 3px; background: linear-gradient(90deg, var(--primary-teal), var(--accent-sage)); margin: 20px auto; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 1000; transition: all 0.3s ease; animation: pulse 2s infinite; }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
+        @keyframes pulse { 0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); } 50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); } }
+        .scroll-top { position: fixed; bottom: 100px; right: 30px; background: var(--primary-teal); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; opacity: 0; pointer-events: none; transition: all 0.3s ease; z-index: 999; }
+        .scroll-top.visible { opacity: 1; pointer-events: all; }
+        .scroll-top:hover { background: var(--dark-teal); transform: translateY(-5px); }
+        .badge { display: inline-block; padding: 8px 20px; background: rgba(90, 154, 146, 0.1); color: var(--primary-teal); border-radius: 25px; font-size: 14px; font-weight: 600; margin: 5px; }
+        .profile-img { border-radius: 16px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; }
+        .profile-img:hover { transform: scale(1.02); }
+        input, textarea { width: 100%; padding: 14px 20px; border: 2px solid var(--warm-beige); border-radius: 12px; font-family: 'Quattrocento Sans', sans-serif; font-size: 16px; transition: all 0.3s ease; background: white; }
+        input:focus, textarea:focus { outline: none; border-color: var(--primary-teal); box-shadow: 0 0 0 3px rgba(90, 154, 146, 0.1); }
+        .check-list li { position: relative; padding-left: 30px; margin-bottom: 12px; line-height: 1.7; }
+        .check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--primary-teal); font-weight: bold; font-size: 18px; }
+
+        /* ===== FLIP CARD STYLES ===== */
+        .flip-card {
+            height: 260px;
+            perspective: 1200px;
+            cursor: pointer;
         }
-        
-        /* Decorative Elements */
-        .decorative-line {
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-teal), var(--accent-sage));
-            margin: 20px auto;
-        }
-        
-        /* WhatsApp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
-        }
-        
-        @keyframes pulse {
-            0%, 100% {
-                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            }
-            50% {
-                box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
-            }
-        }
-        
-        /* Scroll to Top */
-        .scroll-top {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            background: var(--primary-teal);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.3s ease;
-            z-index: 999;
-        }
-        
-        .scroll-top.visible {
-            opacity: 1;
-            pointer-events: all;
-        }
-        
-        .scroll-top:hover {
-            background: var(--dark-teal);
-            transform: translateY(-5px);
-        }
-        
-        /* Badge Styles */
-        .badge {
-            display: inline-block;
-            padding: 8px 20px;
-            background: rgba(90, 154, 146, 0.1);
-            color: var(--primary-teal);
-            border-radius: 25px;
-            font-size: 14px;
-            font-weight: 600;
-            margin: 5px;
-        }
-        
-        /* Image Styles */
-        .profile-img {
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .profile-img:hover {
-            transform: scale(1.02);
-        }
-        
-        /* Form Styles */
-        input, textarea {
-            width: 100%;
-            padding: 14px 20px;
-            border: 2px solid var(--warm-beige);
-            border-radius: 12px;
-            font-family: 'Quattrocento Sans', sans-serif;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            background: white;
-        }
-        
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--primary-teal);
-            box-shadow: 0 0 0 3px rgba(90, 154, 146, 0.1);
-        }
-        
-        /* List Styles */
-        .check-list li {
+        .flip-card-inner {
             position: relative;
-            padding-left: 30px;
-            margin-bottom: 12px;
-            line-height: 1.7;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transform-style: preserve-3d;
         }
-        
-        .check-list li::before {
-            content: "✓";
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front,
+        .flip-card-back {
             position: absolute;
-            left: 0;
-            color: var(--primary-teal);
-            font-weight: bold;
-            font-size: 18px;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 36px 32px;
+            text-align: center;
         }
-        
-        /* Responsive */
+        .flip-card-front {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+        .flip-card-back {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--dark-teal) 100%);
+            transform: rotateY(180deg);
+            box-shadow: 0 12px 28px rgba(90, 154, 146, 0.35);
+        }
+        .flip-hint {
+            margin-top: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--accent-sage);
+            opacity: 0.8;
+        }
+        .flip-hint i {
+            margin-right: 4px;
+        }
+
+        /* Mobile: tap to flip */
+        .flip-card.tapped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .elfsight-app-0ccebcc5-f21f-4ee7-8385-9b6d20bc8af9 {
+            min-height: 300px;
+        }
+
         @media (max-width: 768px) {
-            .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                bottom: 20px;
-                right: 20px;
-            }
-            
-            .scroll-top {
-                bottom: 85px;
-                right: 20px;
-            }
+            .whatsapp-float { width: 55px; height: 55px; bottom: 20px; right: 20px; }
+            .scroll-top { bottom: 85px; right: 20px; }
+            .blog-modal { padding: 28px 20px; }
         }
     </style>
 </head>
@@ -331,49 +153,71 @@
     <header class="header-bg fixed w-full top-0 z-50" id="header">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between py-4">
-                <!-- Logo -->
                 <div class="flex items-center">
                     <a href="#home" class="flex items-center space-x-3">
-                        <img src="https://static.wixstatic.com/media/b3c662_8d9d2d876027452c8eeee9f8c750a709~mv2.png/v1/crop/x_7,y_7,w_325,h_347/fill/w_158,h_168,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b3c662_8d9d2d876027452c8eeee9f8c750a709~mv2.png" 
-                             alt="My Healing Space Logo" 
-                             class="h-12 w-12"
-                             onerror="this.style.display='none'">
+                        <img src="https://static.wixstatic.com/media/b3c662_8d9d2d876027452c8eeee9f8c750a709~mv2.png/v1/crop/x_7,y_7,w_325,h_347/fill/w_158,h_168,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b3c662_8d9d2d876027452c8eeee9f8c750a709~mv2.png" alt="My Healing Space Logo" class="h-12 w-12" onerror="this.style.display='none'">
                         <span class="text-2xl font-semibold" style="font-family: 'Cormorant Garamond', serif; color: var(--primary-teal);">My Healingspace.lk</span>
                     </a>
                 </div>
-                
-                <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex items-center space-x-8">
                     <a href="#home" class="text-gray-700 hover:text-[#5A9A92] transition-colors font-medium">HOME</a>
                     <a href="#asha" class="text-gray-700 hover:text-[#5A9A92] transition-colors font-medium">ABOUT</a>
                     <a href="#services" class="text-gray-700 hover:text-[#5A9A92] transition-colors font-medium">OUR PROGRAMS</a>
+                    <a href="#blog" class="text-gray-700 hover:text-[#5A9A92] transition-colors font-medium">ARTICLES</a>
                     <a href="#contact" class="text-gray-700 hover:text-[#5A9A92] transition-colors font-medium">CONTACT</a>
                     <a href="#book" class="btn-primary">BOOK ONLINE</a>
                 </nav>
-                
-                <!-- Mobile Menu Button -->
                 <button class="lg:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
-        
-        <!-- Mobile Menu Overlay -->
         <div class="menu-overlay lg:hidden" id="menu-overlay"></div>
-        
-        <!-- Mobile Navigation -->
-        <div class="mobile-menu fixed top-0 right-0 h-full w-full sm:w-80 bg-white shadow-2xl lg:hidden" style="z-index: 50;" id="mobile-menu">
-            <div class="p-6">
-                <button class="absolute top-6 right-6 text-gray-700 hover:text-[#5A9A92] transition-colors" id="close-menu">
-                    <i class="fas fa-times text-2xl"></i>
-                </button>
-                <nav class="mt-16 flex flex-col space-y-6">
-                    <a href="#home" class="mobile-nav-link text-xl text-gray-700 hover:text-[#5A9A92] transition-colors">HOME</a>
-                    <a href="#asha" class="mobile-nav-link text-xl text-gray-700 hover:text-[#5A9A92] transition-colors">ABOUT</a>
-                    <a href="#services" class="mobile-nav-link text-xl text-gray-700 hover:text-[#5A9A92] transition-colors">OUR PROGRAMS</a>
-                    <a href="#contact" class="mobile-nav-link text-xl text-gray-700 hover:text-[#5A9A92] transition-colors">CONTACT</a>
-                    <a href="#book" class="mobile-nav-link btn-primary inline-block text-center">BOOK ONLINE</a>
+        <div class="mobile-menu lg:hidden" id="mobile-menu">
+            <div class="min-h-full flex flex-col px-6 py-8" style="background: #FAF9F6;">
+                <!-- Header row -->
+                <div class="flex items-center justify-between mb-12">
+                    <span class="text-xl font-semibold" style="font-family: 'Cormorant Garamond', serif; color: var(--primary-teal);">My Healingspace.lk</span>
+                    <button id="close-menu" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200 transition-colors text-gray-600">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Nav links - large and tappable -->
+                <nav class="flex flex-col gap-1 flex-1">
+                    <a href="#home" class="mobile-nav-link flex items-center gap-4 px-4 py-5 rounded-2xl text-2xl font-medium text-gray-700 hover:bg-white hover:text-[#5A9A92] transition-all border border-transparent hover:border-gray-100 hover:shadow-sm">
+                        <span style="color: var(--primary-teal); font-size: 1.5rem;">🏠</span> Home
+                    </a>
+                    <a href="#asha" class="mobile-nav-link flex items-center gap-4 px-4 py-5 rounded-2xl text-2xl font-medium text-gray-700 hover:bg-white hover:text-[#5A9A92] transition-all border border-transparent hover:border-gray-100 hover:shadow-sm">
+                        <span style="color: var(--primary-teal); font-size: 1.5rem;">👩‍💼</span> About
+                    </a>
+                    <a href="#services" class="mobile-nav-link flex items-center gap-4 px-4 py-5 rounded-2xl text-2xl font-medium text-gray-700 hover:bg-white hover:text-[#5A9A92] transition-all border border-transparent hover:border-gray-100 hover:shadow-sm">
+                        <span style="color: var(--primary-teal); font-size: 1.5rem;">💚</span> Our Programs
+                    </a>
+                    <a href="#blog" class="mobile-nav-link flex items-center gap-4 px-4 py-5 rounded-2xl text-2xl font-medium text-gray-700 hover:bg-white hover:text-[#5A9A92] transition-all border border-transparent hover:border-gray-100 hover:shadow-sm">
+                        <span style="color: var(--primary-teal); font-size: 1.5rem;">📸</span> Articles
+                    </a>
+                    <a href="#contact" class="mobile-nav-link flex items-center gap-4 px-4 py-5 rounded-2xl text-2xl font-medium text-gray-700 hover:bg-white hover:text-[#5A9A92] transition-all border border-transparent hover:border-gray-100 hover:shadow-sm">
+                        <span style="color: var(--primary-teal); font-size: 1.5rem;">✉️</span> Contact
+                    </a>
                 </nav>
+
+                <!-- CTA Button -->
+                <div class="mt-8">
+                    <a href="#contact" class="mobile-nav-link btn-primary block text-center text-lg py-4">BOOK ONLINE</a>
+                </div>
+
+                <!-- Contact info -->
+                <div class="mt-8 pt-8 border-t border-gray-200">
+                    <a href="https://wa.me/94702704537" class="flex items-center gap-3 text-gray-500 hover:text-[#5A9A92] transition-colors mb-4">
+                        <i class="fab fa-whatsapp text-2xl" style="color: var(--primary-teal);"></i>
+                        <span>+94 702704537</span>
+                    </a>
+                    <a href="mailto:asha_wani@outlook.com" class="flex items-center gap-3 text-gray-500 hover:text-[#5A9A92] transition-colors">
+                        <i class="fas fa-envelope text-2xl" style="color: var(--primary-teal);"></i>
+                        <span>asha_wani@outlook.com</span>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -382,44 +226,24 @@
     <section id="home" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 hero-gradient">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Hero Content -->
                 <div class="fade-in">
-                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-light mb-6" style="color: var(--primary-teal); line-height: 1.2;">
-                        My Healingspace.lk
-                    </h1>
-                    <p class="text-2xl sm:text-3xl mb-8 font-light" style="font-family: 'Cormorant Garamond', serif; color: var(--text-dark);">
-                        A gentle space for clarity, calm, and emotional healing
-                    </p>
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-light mb-6" style="color: var(--primary-teal); line-height: 1.2;">My Healingspace.lk</h1>
+                    <p class="text-2xl sm:text-3xl mb-8 font-light" style="font-family: 'Cormorant Garamond', serif; color: var(--text-dark);">A gentle space for clarity, calm, and emotional healing</p>
                     <div class="prose prose-lg max-w-none mb-8" style="color: var(--text-gray);">
-                        <p class="mb-4 leading-relaxed">
-                            Life can feel heavy — even when everything looks "fine" on the outside.
-                        </p>
-                        <p class="mb-4 leading-relaxed">
-                            My Healing Space was created for those quiet moments when you know you need support, 
-                            but don't always know how to ask for it. This is a space to pause, breathe, and begin 
-                            again — without labels, pressure, or judgement.
-                        </p>
-                        <p class="mb-6 leading-relaxed">
-                            Whether you are seeking help for your child, guidance as a parent, or an individual 
-                            seeking a calmer way to navigate life's challenges, you are welcome here.
-                        </p>
+                        <p class="mb-4 leading-relaxed">Life can feel heavy — even when everything looks "fine" on the outside.</p>
+                        <p class="mb-4 leading-relaxed">My Healing Space was created for those quiet moments when you know you need support, but don't always know how to ask for it. This is a space to pause, breathe, and begin again — without labels, pressure, or judgement.</p>
+                        <p class="mb-6 leading-relaxed">Whether you are seeking help for your child, guidance as a parent, or an individual seeking a calmer way to navigate life's challenges, you are welcome here.</p>
                     </div>
-                    
-                    <!-- Service Badges -->
                     <div class="flex flex-wrap gap-2 mb-8">
                         <span class="badge">Counselling</span>
                         <span class="badge">Special Education</span>
                         <span class="badge">Mindfulness</span>
                         <span class="badge">Social Awareness</span>
                     </div>
-                    
-                    <!-- CTAs -->
                     <div class="flex flex-wrap gap-4">
                         <a href="#contact" class="btn-primary">Get Started</a>
-                        <a href="#asha" class="btn-secondary">Learn More</a>
+                        <a href="#" class="btn-secondary">Learn More</a>
                     </div>
-                    
-                    <!-- Contact Info -->
                     <div class="mt-10 pt-10 border-t border-gray-200">
                         <div class="flex flex-col sm:flex-row gap-6">
                             <div class="flex items-center gap-3">
@@ -439,87 +263,47 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Hero Image -->
                 <div class="fade-in hidden lg:block">
-                    <img src="https://static.wixstatic.com/media/b3c662_90cc4fb2e25549e08fff3c55a142c17d~mv2.png/v1/crop/x_0,y_638,w_4284,h_4437/fill/w_389,h_403,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0379_heic.png" 
-                         alt="Healing Space" 
-                         class="rounded-3xl shadow-2xl w-full h-auto"
-                         onerror="this.style.display='none'">
+                    <img src="https://static.wixstatic.com/media/b3c662_90cc4fb2e25549e08fff3c55a142c17d~mv2.png/v1/crop/x_0,y_638,w_4284,h_4437/fill/w_389,h_403,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0379_heic.png" alt="Healing Space" class="rounded-3xl shadow-2xl w-full h-auto" onerror="this.style.display='none'">
                 </div>
             </div>
         </div>
     </section>
 
-
     <!-- Professional Profile Section -->
-    <section id="asha"class="py-20 lg:py-32" style="background: var(--soft-cream);"> 
+    <section id="asha" class="py-20 lg:py-32" style="background: var(--soft-cream);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Profile Header -->
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl lg:text-5xl mb-4" style="color: var(--primary-teal);">Asha Wanigasekera</h2>
+                <h2 class="text-5xl lg:text-6xl mb-4" style="color: var(--primary-teal);">Asha Wanigasekera</h2>
                 <div class="decorative-line"></div>
-                <p class="text-xl mt-6" style="color: var(--text-gray);">
-                    Counseling Psychologist / SENCO / Special Educator<br>
-                    <span class="text-sm">(UAE / KHDA Approved)</span>
-                </p>
+                <p class="text-2xl mt-6" style="color: var(--text-gray);">Counseling Psychologist / SENCO / Special Educator<br><span class="text-base">(UAE / KHDA Approved)</span></p>
             </div>
-            
-            <!-- Profile Images -->
             <div class="flex justify-center gap-6 mb-12 flex-wrap fade-in">
-                <img src="https://static.wixstatic.com/media/b3c662_34106cece4f244fea83bac28e03fd0ce~mv2.jpeg/v1/crop/x_26,y_53,w_561,h_584/fill/w_168,h_218,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202026-01-08%20at%2010_19_18.jpeg" 
-                     alt="Asha Wanigasekera" 
-                     class="profile-img w-40 h-48 object-cover"
-                     onerror="this.style.display='none'">
-                <img src="https://static.wixstatic.com/media/b3c662_f1d7bfe9f8b34cae8de66f3392b71ded~mv2.jpg/v1/crop/x_1,y_0,w_429,h_430/fill/w_342,h_343,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/b3c662_f1d7bfe9f8b34cae8de66f3392b71ded~mv2.jpg" 
-                     alt="Asha Wanigasekera Professional" 
-                     class="profile-img w-40 h-48 object-cover"
-                     onerror="this.style.display='none'">
+                <img src="https://static.wixstatic.com/media/b3c662_34106cece4f244fea83bac28e03fd0ce~mv2.jpeg/v1/crop/x_26,y_53,w_561,h_584/fill/w_168,h_218,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202026-01-08%20at%2010_19_18.jpeg" alt="Asha Wanigasekera" class="profile-img w-40 h-48 object-cover" onerror="this.style.display='none'">
+                <img src="https://static.wixstatic.com/media/b3c662_f1d7bfe9f8b34cae8de66f3392b71ded~mv2.jpg/v1/crop/x_1,y_0,w_429,h_430/fill/w_342,h_343,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/b3c662_f1d7bfe9f8b34cae8de66f3392b71ded~mv2.jpg" alt="Asha Wanigasekera Professional" class="profile-img w-48 h-48 object-cover rounded-full" onerror="this.style.display='none'">
             </div>
-            
-            <!-- Credentials -->
             <div class="text-center mb-12 fade-in">
                 <div class="inline-block bg-white rounded-2xl p-8 shadow-lg">
-                    <p class="text-gray-600 leading-relaxed">
-                        MSc. Girne American University<br>
-                        BSc (Psy) Girne American University<br>
-                        HND Child Psy.<br>
-                        Dipl. Counseling Psy. (IPS)<br>
-                        Dipl. General Psy.
-                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">MSc. Girne American University<br>BSc (Psy) Girne American University<br>HND Child Psy.<br>Dipl. Counseling Psy. (IPS)<br>Dipl. General Psy.</p>
                 </div>
             </div>
-            
-            <!-- About Me Content -->
             <div class="grid lg:grid-cols-2 gap-12 mb-16">
                 <div class="slide-left">
-                    <h3 class="text-3xl mb-6" style="color: var(--primary-teal);">About me</h3>
-                    <div class="prose prose-lg" style="color: var(--text-gray);">
-                        <p class="mb-6 leading-relaxed">
-                            I am a Counselling Psychologist with over 20 years of experience working closely with 
-                            children, parents, educators and families across diverse settings.
-                        </p>
-                        <p class="mb-6 leading-relaxed">
-                            Over the years, I have had the privilege of listening to children who struggle to put 
-                            their feelings into words, and to parents who care deeply yet feel unsure, worried or 
-                            exhausted. These experiences have shaped my belief that support needs to be compassionate, 
-                            respectful and deeply human.
-                        </p>
+                    <h3 class="text-4xl mb-6" style="color: var(--primary-teal);">About me</h3>
+                    <div style="color: var(--text-gray); font-size: 1.15rem; line-height: 1.9;">
+                        <p class="mb-6">I am a Counselling Psychologist with over 20 years of experience working closely with children, parents, educators and families across diverse settings.</p>
+                        <p class="mb-6">Over the years, I have had the privilege of listening to children who struggle to put their feelings into words, and to parents who care deeply yet feel unsure, worried or exhausted. These experiences have shaped my belief that support needs to be compassionate, respectful and deeply human.</p>
                     </div>
                 </div>
-                
                 <div class="slide-right">
-                    <h3 class="text-3xl mb-6" style="color: var(--primary-teal);">My work focuses on:</h3>
-                    <ul class="check-list" style="color: var(--text-gray);">
+                    <h3 class="text-4xl mb-6" style="color: var(--primary-teal);">My work focuses on:</h3>
+                    <ul class="check-list" style="color: var(--text-gray); font-size: 1.15rem;">
                         <li>Children and parenting support</li>
                         <li>Special needs and neurodiversity</li>
                         <li>Mindfulness and emotional regulation</li>
                         <li>Creating awareness around children's mental health and wellbeing</li>
                     </ul>
-                    <p class="mt-8 leading-relaxed" style="color: var(--text-gray);">
-                        I have worked in educational and support settings, including leadership roles within 
-                        educational support services, and now practise independently as a counselling consultant.
-                    </p>
+                    <p class="mt-8" style="color: var(--text-gray); font-size: 1.15rem; line-height: 1.9;">I have worked in educational and support settings, including leadership roles within educational support services, and now practise independently as a counselling consultant.</p>
                 </div>
             </div>
         </div>
@@ -531,44 +315,90 @@
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl lg:text-5xl mb-4" style="color: var(--primary-teal);">How I Can Support You</h2>
                 <div class="decorative-line"></div>
+                <p class="mt-6 text-base" style="color: var(--text-gray);">Hover over a card to learn more.</p>
             </div>
-            
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Service Card 1 -->
-                <div class="service-card p-8 fade-in">
-                    <div class="mb-6 text-center text-5xl">👩‍⚕️</div>
-                    <h3 class="text-2xl mb-4 text-center" style="color: var(--primary-teal);">Counselling</h3>
-                    <p class="leading-relaxed text-center" style="color: var(--text-gray);">
-                        
-                    </p>
+
+                <!-- Card 1: Counselling -->
+                <div class="flip-card fade-in" style="animation-delay: 0s;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="text-6xl mb-5">👩‍⚕️</div>
+                            <h3 class="text-2xl" style="color: var(--primary-teal);">Counselling</h3>
+                            <div class="flip-hint">
+                                <i class="fas fa-sync-alt"></i> Hover to explore
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-4xl mb-4">👩‍⚕️</div>
+                            <h3 class="text-xl mb-4" style="color: white;">Counselling</h3>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; line-height: 1.8;">
+                                Counselling support is offered for children, adolescents, parents and adults, focusing on emotional wellbeing, behavioural concerns and life challenges. Sessions are available online and in-person, and are guided by care, ethics and understanding.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Service Card 2 -->
-                <div class="service-card p-8 fade-in" style="animation-delay: 0.1s;">
-                    <div class="mb-6 text-center text-5xl">📚</div>
-                    <h3 class="text-2xl mb-4 text-center" style="color: var(--primary-teal);">Special Education & Learning Support</h3>
-                    <p class="leading-relaxed text-center" style="color: var(--text-gray);">
-                        
-                    </p>
+
+                <!-- Card 2: Special Education -->
+                <div class="flip-card fade-in" style="animation-delay: 0.1s;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="text-6xl mb-5">📚</div>
+                            <h3 class="text-2xl" style="color: var(--primary-teal);">Special Education & Learning Support</h3>
+                            <div class="flip-hint">
+                                <i class="fas fa-sync-alt"></i> Hover to explore
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-4xl mb-4">📚</div>
+                            <h3 class="text-xl mb-4" style="color: white;">Special Education & Learning Support</h3>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; line-height: 1.8;">
+                                This support is rooted in understanding each child's unique learning, emotional and developmental profile. My work includes guiding parents, supporting children with diverse learning needs, and collaborating with schools — always with a strengths-based, inclusive approach.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Service Card 3 -->
-                <div class="service-card p-8 fade-in" style="animation-delay: 0.2s;">
-                    <div class="mb-6 text-center text-5xl">🧘</div>
-                    <h3 class="text-2xl mb-4 text-center" style="color: var(--primary-teal);">Mindfulness Programs</h3>
-                    <p class="leading-relaxed text-center" style="color: var(--text-gray);">
-                        
-                    </p>
+
+                <!-- Card 3: Mindfulness -->
+                <div class="flip-card fade-in" style="animation-delay: 0.2s;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="text-6xl mb-5">🧘</div>
+                            <h3 class="text-2xl" style="color: var(--primary-teal);">Mindfulness Programs</h3>
+                            <div class="flip-hint">
+                                <i class="fas fa-sync-alt"></i> Hover to explore
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-4xl mb-4">🧘</div>
+                            <h3 class="text-xl mb-4" style="color: white;">Mindfulness Programs</h3>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; line-height: 1.8;">
+                                Mindfulness-based programs are designed to support emotional regulation, self-awareness and calm. Programs are offered for children, parents, educators and organizations, and are thoughtfully adapted to each age group and context.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Service Card 4 -->
-                <div class="service-card p-8 fade-in" style="animation-delay: 0.3s;">
-                    <div class="mb-6 text-center text-5xl">🌍</div>
-                    <h3 class="text-2xl mb-4 text-center" style="color: var(--primary-teal);">Social Awareness & Outreach</h3>
-                    <p class="leading-relaxed text-center" style="color: var(--text-gray);">
-                        
-                    </p>
+
+                <!-- Card 4: Social Awareness -->
+                <div class="flip-card fade-in" style="animation-delay: 0.3s;">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="text-6xl mb-5">🌍</div>
+                            <h3 class="text-2xl" style="color: var(--primary-teal);">Social Awareness & Outreach</h3>
+                            <div class="flip-hint">
+                                <i class="fas fa-sync-alt"></i> Hover to explore
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-4xl mb-4">🌍</div>
+                            <h3 class="text-xl mb-4" style="color: white;">Social Awareness & Outreach</h3>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; line-height: 1.8;">
+                                Talks, workshops and collaborative programs aimed at building awareness around children's mental health, neurodiversity and emotional wellbeing within schools, organizations and communities.
+                            </p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -579,26 +409,16 @@
             <div class="fade-in">
                 <h2 class="text-4xl lg:text-5xl mb-6 text-center" style="color: var(--primary-teal);">How I work</h2>
                 <div class="decorative-line"></div>
-                
                 <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-lg mt-12">
-                    <p class="text-xl mb-8 leading-relaxed" style="color: var(--text-gray);">
-                        My approach is grounded in the belief that behavior is communication, and that healing 
-                        begins when people feel emotionally safe.
-                    </p>
-                    
+                    <p class="text-xl mb-8 leading-relaxed" style="color: var(--text-gray);">My approach is grounded in the belief that behavior is communication, and that healing begins when people feel emotionally safe.</p>
                     <p class="text-lg mb-6 font-semibold" style="color: var(--primary-teal);">I work in a way that is:</p>
-                    
                     <ul class="check-list mb-8">
                         <li>Child-centred and developmentally sensitive</li>
                         <li>Supportive of parents and caregivers</li>
                         <li>Strengths-based rather than problem-focused</li>
                         <li>Guided by professional ethics and care</li>
                     </ul>
-                    
-                    <p class="text-lg leading-relaxed italic" style="color: var(--text-gray);">
-                        There is no rushing here, and no one-size-fits-all approach. Each individual and family 
-                        is met where they are, with respect for their unique experiences and needs.
-                    </p>
+                    <p class="text-lg leading-relaxed italic" style="color: var(--text-gray);">There is no rushing here, and no one-size-fits-all approach. Each individual and family is met where they are, with respect for their unique experiences and needs.</p>
                 </div>
             </div>
         </div>
@@ -610,7 +430,6 @@
             <div class="fade-in text-center">
                 <h2 class="text-4xl lg:text-5xl mb-6" style="color: var(--primary-teal);">This space may be right for you if…</h2>
                 <div class="decorative-line"></div>
-                
                 <div class="mt-12 bg-gradient-to-br from-[#5A9A92]/5 to-[#9FB09F]/5 rounded-3xl p-8 lg:p-12">
                     <ul class="check-list text-left max-w-3xl mx-auto mb-8">
                         <li>You're concerned about your child's emotions, behaviour or development</li>
@@ -619,10 +438,7 @@
                         <li>You're looking for gentler ways to manage stress and emotional overwhelm</li>
                         <li>Your school or organisation values emotional wellbeing and inclusion</li>
                     </ul>
-                    
-                    <p class="text-xl italic mt-8" style="color: var(--primary-teal);">
-                        If any of this resonates, you don't need to have it all figured out — reaching out is enough.
-                    </p>
+                    <p class="text-xl italic mt-8" style="color: var(--primary-teal);">If any of this resonates, you don't need to have it all figured out — reaching out is enough.</p>
                 </div>
             </div>
         </div>
@@ -634,13 +450,8 @@
             <div class="fade-in">
                 <h2 class="text-4xl lg:text-5xl mb-6 text-center" style="color: var(--primary-teal);">Reaching Out</h2>
                 <div class="decorative-line"></div>
-                
                 <div class="mt-12">
-                    <p class="text-xl mb-8 leading-relaxed text-center" style="color: var(--text-gray);">
-                        Let's begin with a conversation. Seeking support can feel like a big step. You may have 
-                        questions, uncertainties, or simply a sense that something needs attention.
-                    </p>
-                    
+                    <p class="text-xl mb-8 leading-relaxed text-center" style="color: var(--text-gray);">Let's begin with a conversation. Seeking support can feel like a big step. You may have questions, uncertainties, or simply a sense that something needs attention.</p>
                     <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-lg mb-12">
                         <p class="text-lg mb-6 font-semibold" style="color: var(--primary-teal);">If you would like to:</p>
                         <ul class="check-list mb-8">
@@ -648,24 +459,17 @@
                             <li>Request a mindfulness program</li>
                             <li>Explore collaboration or awareness initiatives</li>
                         </ul>
-                        <p class="text-lg leading-relaxed" style="color: var(--text-gray);">
-                            You are welcome to get in touch for a confidential and thoughtful conversation.
-                        </p>
+                        <p class="text-lg leading-relaxed" style="color: var(--text-gray);">You are welcome to get in touch for a confidential and thoughtful conversation.</p>
                     </div>
-                    
                     <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 border-l-4" style="border-color: var(--primary-teal);">
                         <p class="font-semibold mb-4" style="color: var(--primary-teal);">Professional Guidelines</p>
-                        <p class="text-sm leading-relaxed mb-3" style="color: var(--text-gray);">
-                            All counselling services are offered in line with professional ethical guidelines.
-                        </p>
+                        <p class="text-sm leading-relaxed mb-3" style="color: var(--text-gray);">All counselling services are offered in line with professional ethical guidelines.</p>
                         <ul class="text-sm space-y-2" style="color: var(--text-gray);">
                             <li>• Confidentiality is respected at all times</li>
                             <li>• Online counselling is provided where appropriate</li>
                             <li>• Online services are not suitable for emergency or crisis situations</li>
                         </ul>
-                        <p class="text-sm mt-4 italic" style="color: var(--text-gray);">
-                            If immediate support is required, please contact local emergency or crisis services.
-                        </p>
+                        <p class="text-sm mt-4 italic" style="color: var(--text-gray);">If immediate support is required, please contact local emergency or crisis services.</p>
                     </div>
                 </div>
             </div>
@@ -679,9 +483,7 @@
                 <h2 class="text-4xl lg:text-5xl mb-4" style="color: var(--primary-teal);">Get in Touch</h2>
                 <div class="decorative-line"></div>
             </div>
-            
             <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Contact Form -->
                 <div class="fade-in">
                     <form id="contact-form" class="space-y-6">
                         <div class="grid sm:grid-cols-2 gap-6">
@@ -706,12 +508,9 @@
                         <p id="form-success" class="hidden text-center text-green-600 font-semibold">Thanks for submitting! We'll be in touch soon.</p>
                     </form>
                 </div>
-                
-                <!-- Contact Info -->
                 <div class="fade-in">
                     <div class="bg-gradient-to-br from-[#5A9A92]/5 to-[#9FB09F]/5 rounded-3xl p-8 lg:p-12 h-full">
                         <h3 class="text-2xl mb-8" style="color: var(--primary-teal);">Contact Information</h3>
-                        
                         <div class="space-y-6 mb-10">
                             <div class="flex items-start gap-4">
                                 <i class="fas fa-map-marker-alt text-2xl mt-1" style="color: var(--primary-teal);"></i>
@@ -720,7 +519,6 @@
                                     <p class="text-gray-600">68, Arthur V. Dias Mawatha,<br>Panadura<br>Sri Lanka</p>
                                 </div>
                             </div>
-                            
                             <div class="flex items-start gap-4">
                                 <i class="fab fa-whatsapp text-2xl mt-1" style="color: var(--primary-teal);"></i>
                                 <div>
@@ -728,7 +526,6 @@
                                     <a href="https://wa.me/94702704537" class="text-gray-600 hover:text-[#5A9A92] transition-colors">+94 702704537</a>
                                 </div>
                             </div>
-                            
                             <div class="flex items-start gap-4">
                                 <i class="fas fa-envelope text-2xl mt-1" style="color: var(--primary-teal);"></i>
                                 <div>
@@ -737,27 +534,54 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="border-t pt-8" style="border-color: var(--warm-beige);">
                             <p class="text-sm mb-4 font-semibold">Follow Us</p>
                             <div class="flex gap-4">
-                                <a href="https://www.facebook.com" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform" style="background: var(--primary-teal);">
-                                    <i class="fab fa-facebook-f text-white"></i>
-                                </a>
-                                <a href="https://www.twitter.com" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform" style="background: var(--primary-teal);">
-                                    <i class="fab fa-twitter text-white"></i>
-                                </a>
-                                <a href="https://www.linkedin.com" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform" style="background: var(--primary-teal);">
-                                    <i class="fab fa-linkedin-in text-white"></i>
-                                </a>
-                                <a href="https://www.instagram.com" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform" style="background: var(--primary-teal);">
-                                    <i class="fab fa-instagram text-white"></i>
-                                </a>
+                                <a href="https://www.facebook.com" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform" style="background: var(--primary-teal);"><i class="fab fa-facebook-f text-white"></i></a>
+                                <a href="https://www.twitter.com" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform" style="background: var(--primary-teal);"><i class="fab fa-twitter text-white"></i></a>
+                                <a href="https://www.linkedin.com" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform" style="background: var(--primary-teal);"><i class="fab fa-linkedin-in text-white"></i></a>
+                                <a href="https://www.instagram.com" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform" style="background: var(--primary-teal);"><i class="fab fa-instagram text-white"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ===== INSTAGRAM FEED SECTION ===== -->
+    <section id="blog" class="py-20 lg:py-32" style="background: var(--soft-cream);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16 fade-in">
+                <p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color: var(--accent-sage);">Stay Connected</p>
+                <h2 class="text-4xl lg:text-5xl mb-4" style="color: var(--primary-teal);">From Our Instagram</h2>
+                <div class="decorative-line"></div>
+                <p class="mt-6 text-lg max-w-2xl mx-auto" style="color: var(--text-gray);">
+                    Gentle thoughts, tips, and reflections on parenting, mindfulness, and emotional wellbeing — shared daily.
+                </p>
+                <a href="https://www.instagram.com/myhealingspace.lk" target="_blank" class="inline-flex items-center gap-2 mt-4 text-sm font-semibold transition-colors hover:opacity-80" style="color: var(--primary-teal);">
+                    <i class="fab fa-instagram text-lg"></i>
+                    @myhealingspace.lk
+                </a>
+            </div>
+
+            <!-- Elfsight Instagram Feed -->
+            <div class="fade-in">
+                <!-- Elfsight Instagram Feed | myhealingspace.lk -->
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-0ccebcc5-f21f-4ee7-8385-9b6d20bc8af9" data-elfsight-app-lazy></div>
+            </div>
+
+            <!-- Follow CTA -->
+            <div class="text-center mt-14 fade-in">
+                <a href="https://www.instagram.com/myhealingspace.lk" target="_blank" class="btn-primary inline-flex items-center gap-3">
+                    <i class="fab fa-instagram text-xl"></i>
+                    Follow on Instagram
+                </a>
+            </div>
+
         </div>
     </section>
 
@@ -767,36 +591,25 @@
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <div>
                     <h4 class="text-xl mb-4" style="font-family: 'Cormorant Garamond', serif;">My Healingspace.lk</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        A gentle space for clarity, calm, and emotional healing. Supporting children, parents, and families across Sri Lanka.
-                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed">A gentle space for clarity, calm, and emotional healing. Supporting children, parents, and families across Sri Lanka.</p>
                 </div>
-                
                 <div>
                     <h4 class="text-lg mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
                         <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
                         <li><a href="#asha" class="hover:text-white transition-colors">About</a></li>
                         <li><a href="#services" class="hover:text-white transition-colors">Our Programs</a></li>
+                        <li><a href="#blog" class="hover:text-white transition-colors">Articles</a></li>
                         <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
-                
                 <div>
                     <h4 class="text-lg mb-4">Connect</h4>
                     <div class="flex gap-3 mb-4">
-                        <a href="https://www.facebook.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                        <a href="https://www.twitter.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="https://www.linkedin.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin-in text-xl"></i>
-                        </a>
-                        <a href="https://www.instagram.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
+                        <a href="https://www.facebook.com" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="https://www.twitter.com" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin-in text-xl"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
                     </div>
                     <p class="text-gray-400 text-sm">
                         <a href="tel:+94702704537" class="hover:text-white transition-colors">+94 702704537</a><br>
@@ -804,141 +617,79 @@
                     </p>
                 </div>
             </div>
-            
             <div class="border-t border-gray-700 pt-8 text-center">
-                <p class="text-gray-400 text-sm">
-                    © 2026 My Healing Space. All rights reserved. | Professional counseling services in Sri Lanka
-                </p>
+                <p class="text-gray-400 text-sm">© 2026 My Healing Space. All rights reserved. | Professional counseling services in Sri Lanka</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
     <a href="https://wa.me/94702704537" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <!-- Scroll to Top Button -->
     <button class="scroll-top" id="scrollTop" title="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- JavaScript -->
     <script>
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
+        // Intersection Observer
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
         }, observerOptions);
-        
-        // Observe all animated elements
-        document.querySelectorAll('.fade-in, .slide-left, .slide-right').forEach(el => {
-            observer.observe(el);
-        });
-        
-        // Mobile menu toggle
+        document.querySelectorAll('.fade-in, .slide-left, .slide-right').forEach(el => observer.observe(el));
+
+        // Mobile menu
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuOverlay = document.getElementById('menu-overlay');
         const closeMenuButton = document.getElementById('close-menu');
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-        
-        function openMobileMenu() {
-            mobileMenu.classList.add('active');
-            menuOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeMobileMenu() {
-            mobileMenu.classList.remove('active');
-            menuOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        
+        function openMobileMenu() { mobileMenu.classList.add('active'); menuOverlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeMobileMenu() { mobileMenu.classList.remove('active'); menuOverlay.classList.remove('active'); document.body.style.overflow = ''; }
         mobileMenuButton.addEventListener('click', openMobileMenu);
         closeMenuButton.addEventListener('click', closeMobileMenu);
         menuOverlay.addEventListener('click', closeMobileMenu);
-        
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
-        });
-        
-        // Header scroll effect
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+        // Header scroll
         const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
-            }
-        });
-        
-        // Scroll to top button
+        window.addEventListener('scroll', () => { header.classList.toggle('header-scrolled', window.scrollY > 50); });
+
+        // Scroll to top
         const scrollTopBtn = document.getElementById('scrollTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
-        });
-        
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Contact form handling
+        window.addEventListener('scroll', () => { scrollTopBtn.classList.toggle('visible', window.scrollY > 500); });
+        scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Contact form
         const contactForm = document.getElementById('contact-form');
         const formSuccess = document.getElementById('form-success');
-        
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Show success message
             formSuccess.classList.remove('hidden');
             contactForm.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                formSuccess.classList.add('hidden');
-            }, 5000);
-            
-            // Here you would typically send the data to a backend
-            console.log('Form submitted:', data);
+            setTimeout(() => formSuccess.classList.add('hidden'), 5000);
         });
-        
-        // Smooth scroll for anchor links
+
+        // Mobile tap-to-flip for service cards
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('tapped');
+            });
+        });
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' });
                 }
             });
         });
+
+
     </script>
 </body>
 </html>
